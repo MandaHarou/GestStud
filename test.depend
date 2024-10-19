@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1728581045 source:c:\users\manda\programme\test\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"Function.h"
+	"Database.h"
+
+1728468449 c:\users\manda\programme\test\stuct.h
+
+1728542260 c:\users\manda\programme\test\function.h
+	"stuct.h"
+
+1728580383 c:\users\manda\programme\test\database.h
+	<stdlib.h>
+	<stdio.h>
+
+1728806429 source:c:\users\manda\programme\first git project\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Function.h"
+	"Database.h"
+
+1728672506 c:\users\manda\programme\first git project\function.h
+	"stuct.h"
+
+1728761030 c:\users\manda\programme\first git project\stuct.h
+
+1728761439 c:\users\manda\programme\first git project\database.h
+	<stdlib.h>
+	<stdio.h>
+
