@@ -4,7 +4,7 @@
 #include <conio.h>
 //***************
 #define MAX 100
-#define NOTEMAX 9
+#define NOTEMAX 10
 //***************
 #include "Function.h"
 #include "Database.h"
@@ -269,7 +269,6 @@ void average_class(void)
     }
     fclose(record);
 }
-
 double cal_average(int x, int y)
 {
     return (double)y / x;
