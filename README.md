@@ -12,4 +12,4 @@ The feature of this project is:
 
 ---
 
-it's small programm, but my next project will be an SSH server.
+it's small programm, but my next project will be an HTTP server.

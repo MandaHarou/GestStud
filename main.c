@@ -25,13 +25,16 @@ int main()
     while(1)
     {
         system("cls");
-        printf("1-New Student\n");
-        printf("2-Display bulletin\n");
-        printf("3-Edit name\n");
-        printf("4-Remove a student\n");
-        printf("5-Display the class average and student aprove\n");
-        printf("6-Exit the program\n\n");
-        printf("Enter your choice: ");
+        system("color 2");
+        printf("\t\t\t\t\t\t-------------------------------------------------\n");
+        printf("\t\t\t\t\t  ""      |t1-New Student\t""                                |\n");
+        printf("\t\t\t\t\t\t|2-Display bulletin\t""                        |\n");
+        printf("\t\t\t\t\t\t|3-Edit name\t""                                |\n");
+        printf("\t\t\t\t\t\t|4-Remove a student\t" "                        |\n");
+        printf("\t\t\t\t\t\t|5-Display the class average and student aprove\t""|\n");
+        printf("\t\t\t\t\t\t|6-Exit the program\t\t\t\t|\n");
+        printf("\t\t\t\t\t\t-------------------------------------------------\n");
+        printf("\t\t\t\t\t\t|Enter your choice: ");
         scanf("%d",&choice[1]);
         printf("\n");
         switch(choice[1])
@@ -106,7 +109,7 @@ int main()
 
 void addstud(Student* s)
 {
-    FILE *record = fopen("bulletin.txt", "a+");
+    FILE *record = fopen("bulletin.db", "a+");
     int code;
     int temp = 0;
     char temp_name[100], temp_firstname[100];
@@ -138,7 +141,7 @@ void display_ID(int* ID)
 {
     int c;
     c = *ID;
-    FILE *record = fopen("bulletin.txt", "r");
+    FILE *record = fopen("bulletin.db", "r");
     char temp_name[100], temp_firstname[100];
     int temp_gradeS, cod;
     if (record == NULL)
@@ -158,7 +161,7 @@ void display_ID(int* ID)
 
 void display_chr(char* x)
 {
-    FILE *record = fopen("bulletin.txt", "r");
+    FILE *record = fopen("bulletin.db", "r");
     char temp_name[100], temp_firstname[100];
     int temp_gradeS, cod;
     if (record == NULL)
@@ -180,8 +183,8 @@ void edit(int* ID)
 {
     int c;
     c = *ID;
-    FILE* record = fopen("bulletin.txt", "r");
-    FILE* ftemp = fopen("temp.txt", "w");
+    FILE* record = fopen("bulletin.db", "r");
+    FILE* ftemp = fopen("temp.db", "w");
     char temp_name[100], temp_firstname[100];
     int temp_gradeS, cod;
     if (record == NULL)
@@ -205,16 +208,16 @@ void edit(int* ID)
     }
     fclose(ftemp);
     fclose(record);
-    remove("bulletin.txt");
-    rename("temp.txt", "bulletin.txt");
+    remove("bulletin.db");
+    rename("temp.db", "bulletin.db");
 }
 
 void remove_stud(int* ID)
 {
     int c;
     c = *ID;
-    FILE* record = fopen("bulletin.txt", "r");
-    FILE* ftemp = fopen("temp.txt", "w");
+    FILE* record = fopen("bulletin.db", "r");
+    FILE* ftemp = fopen("temp.db", "w");
     char temp_name[100], temp_firstname[100];
     int temp_gradeS, cod;
     if (record == NULL)
@@ -236,15 +239,15 @@ void remove_stud(int* ID)
     }
     fclose(ftemp);
     fclose(record);
-    remove("bulletin.txt");
-    rename("temp.txt", "bulletin.txt");
+    remove("bulletin.db");
+    rename("temp.db", "bulletin.db");
 }
 
 void average_class(void)
 {
     char temp_name[100], temp_firstname[100];
     int temp_gradeS, cod, i = 0;
-    FILE* record = fopen("bulletin.txt", "rt");
+    FILE* record = fopen("bulletin.db", "rt");
     if (record != NULL)
     {
         while (fscanf(record, "%d\n%s\n%s\n%d", &cod, temp_name, temp_firstname, &temp_gradeS) == 4)
