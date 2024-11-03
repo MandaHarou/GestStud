@@ -12,4 +12,4 @@ The part of this project is:
 
 ---
 
-So is small programme, but my next project ssh server.
+So is small programme, but my next project http server.
