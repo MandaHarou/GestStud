@@ -2,9 +2,9 @@ This is my firts project in C to get on the gitHub(Repository)
 
 ---
 
-This programme is student management on the scholl
-The part of this project is:
-1.Record the student: Name,Firstname,Classe average
+This programme is student management system for the scholl
+The feature of this project is:
+1.Record a student: Name,Firstname,Classe average
 2.Display a specific student or all student information
 3.Modification information of student
 4.Remove a Student
@@ -12,4 +12,4 @@ The part of this project is:
 
 ---
 
-So is small programme, but my next project http server.
+it's small programm, but my next project will be an HTTP server.
